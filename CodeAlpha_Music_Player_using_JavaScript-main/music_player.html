@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player-container">
+    <!-- Song Info -->
+    <div class="img-container">
+        <img src="https://via.placeholder.com/250" alt="Album Art" id="cover">
+    </div>
+    <h2 id="title">Song Title</h2>
+    <h3 id="artist">Artist Name</h3>
+
+    <!-- Progress Bar -->
+    <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+        <div class="duration-wrapper">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <i class="fas fa-backward" id="prev" title="Previous"></i>
+        <i class="fas fa-play main-button" id="play" title="Play"></i>
+        <i class="fas fa-forward" id="next" title="Next"></i>
+    </div>
+
+    <!-- Volume -->
+    <div class="volume-container">
+        <i class="fas fa-volume-up"></i>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <!-- Playlist (Bonus) -->
+    <div class="playlist" id="playlist">
+        <!-- List items will be injected by JS -->
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
