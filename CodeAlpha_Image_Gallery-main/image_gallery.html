@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Image Gallery</h1>
+
+    <!-- Category Filters -->
+    <div class="filter-buttons">
+        <button class="btn active" onclick="filterSelection('all')">Show all</button>
+        <button class="btn" onclick="filterSelection('nature')">Nature</button>
+        <button class="btn" onclick="filterSelection('architecture')">Architecture</button>
+        <button class="btn" onclick="filterSelection('animals')">Animals</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery">
+        <div class="gallery-item nature">
+            <img src="https://picsum.photos/id/10/800/600" alt="Nature 1" onclick="openLightbox(0)">
+            <div class="overlay">Nature 1</div>
+        </div>
+        <div class="gallery-item nature">
+            <img src="https://fastly.picsum.photos/id/168/1920/1280.jpg?hmac=mVK82R-5FsJLUcjRsdWA1-NdN6xw6MexzmRmtqNpWUs" alt="Nature 2" onclick="openLightbox(1)">
+            <div class="overlay">Nature 2</div>
+        </div>
+        <div class="gallery-item nature">
+            <img src="https://fastly.picsum.photos/id/196/2048/1536.jpg?hmac=ms1QhP7El_5Dctsq98kJyzsT7-WqnGVNN-pwjAQ98x0" alt="Nature 3" onclick="openLightbox(2)">
+            <div class="overlay">Nature 3</div>
+        </div>
+        <div class="gallery-item architecture">
+            <img src="https://picsum.photos/id/1011/800/600" alt="Architecture 1" onclick="openLightbox(1)">
+            <div class="overlay">Architecture 1</div>
+        </div>
+        <div class="gallery-item architecture">
+            <img src="https://fastly.picsum.photos/id/204/5000/3333.jpg?hmac=EealoGuyf-stZ5_tXjA82uPviolpuqVJVaZ5cBB-hLE" alt="Architecture 2" onclick="openLightbox(1)">
+            <div class="overlay">Architecture 2</div>
+        </div>
+        <div class="gallery-item architecture">
+            <img src="https://fastly.picsum.photos/id/299/5000/3288.jpg?hmac=vajPmKo1hPW0RLYeb2h14Ry9Mp5Gw0rs0yc78FmBmdM" alt="Architecture 3" onclick="openLightbox(1)">
+            <div class="overlay">Architecture 3</div>
+        </div>
+        <div class="gallery-item animals">
+            <img src="https://picsum.photos/id/237/800/600" alt="Dog" onclick="openLightbox(2)">
+            <div class="overlay">Animals 1</div>
+        </div>
+        <div class="gallery-item animals">
+            <img src="https://fastly.picsum.photos/id/169/2500/1662.jpg?hmac=3DBeyQbiPxO88hBdhIuFPbvy2ff7cm9vmnq8lPIL9Ug" alt="Dog" onclick="openLightbox(2)">
+            <div class="overlay">Animals 2</div>
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="">
+        <div id="caption"></div>
+    </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
